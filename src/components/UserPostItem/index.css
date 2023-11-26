@@ -1,0 +1,112 @@
+@media screen and (min-width: 768px) {
+  .user-profile-container {
+    width: 1040px;
+    height: 60px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 30px;
+    border-radius: 4px 4px 0px 0px;
+    border: 1px solid #dbdbdb;
+    background: #fff;
+  }
+  .user-profile-pic {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 28px;
+    background: lightgray 0% 0% / 2.5949951261281967px 2.5949951261281967px
+      repeat;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+  .user-name-styling {
+    color: #262626;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+    text-decoration: none;
+  }
+  .post-image {
+    width: 1040px;
+    height: 614px;
+    flex-shrink: 0;
+    background: lightgray 50% / cover no-repeat;
+  }
+  .post-info-container {
+    width: 1040px;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 0px 0px 4px 4px;
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  .icon-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .icon-styling {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .like-styling {
+    color: #262626;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+  }
+  .caption-styling {
+    color: #262626;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+  }
+  .comment-username-styling {
+    color: #262626;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+  }
+  .comment-styling {
+    color: #262626;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .time-difference-styling {
+    color: #989898;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+  }
+  .react-icon-button {
+    border-style: none;
+    background-color: transparent;
+  }
+  .user-post-item {
+    margin-left: 100px;
+    margin-bottom: 15px;
+  }
+  .icon_button {
+    border-style: none;
+    background-color: transparent;
+  }
+}
