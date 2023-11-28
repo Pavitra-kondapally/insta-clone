@@ -21,6 +21,16 @@ class UserPosts extends Component {
   state = {
     postsApiStatus: postsApiStatusConstants.initial,
     postsList: [],
+    searchPosts: this.props,
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    if (props.searchPosts !== state.searchPosts) {
+      return {
+        searchPosts: props.searchPosts,
+      }
+    }
+    return null
   }
 
   componentDidMount() {
@@ -139,13 +149,14 @@ class UserPosts extends Component {
 
   renderSearchResults = searchPosts => (
     <ul className="search-result-list">
-      {searchPosts.map(eachSearchPost => (
-        <SearchPostItem
-          searchUserPostDetails={eachSearchPost}
-          key={eachSearchPost.postId}
-          initiatePostLikeApi={this.initiatePostLikeApi}
-        />
-      ))}
+      {searchPosts &&
+        searchPosts.map(eachSearchPost => (
+          <SearchPostItem
+            searchUserPostDetails={eachSearchPost}
+            key={eachSearchPost.postId}
+            initiateSearchPostLikeApi={this.initiateSearchPostLikeApi}
+          />
+        ))}
     </ul>
   )
 
@@ -167,6 +178,7 @@ class UserPosts extends Component {
         const {postsList} = this.state
         const {searchPosts, isSearchButtonClicked} = value
         console.log('search posts in the component: ', searchPosts)
+        console.log('context value in userPosts: ', value)
         if (isSearchButtonClicked) {
           if (searchPosts.length === 0) {
             return this.renderNoSearchPosts()

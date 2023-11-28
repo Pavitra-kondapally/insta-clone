@@ -7,6 +7,7 @@ const SearchContext = React.createContext({
   updatingSearchPosts: () => {},
   isSearchButtonClicked: false,
   changingSearchButtonState: () => {},
+  initiateSearchPostLikeApi: () => {},
 })
 
 export default SearchContext
