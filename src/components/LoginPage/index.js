@@ -111,7 +111,7 @@ class LoginPage extends Component {
           <img
             src="https://res.cloudinary.com/dl9ywntts/image/upload/v1699271984/logo_hlq4ud.jpg"
             className="logo-form-image"
-            alt="form-logo"
+            alt="website logo"
           />
           <div className="input-container">{this.renderUsernameField()}</div>
           <div className="input-container">{this.renderPasswordField()}</div>

@@ -1,6 +1,6 @@
 import {Component} from 'react'
 import './App.css'
-import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
+import {Switch, Route, Redirect} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
 import LoginPage from './components/LoginPage'
@@ -87,16 +87,14 @@ class App extends Component {
           initiateSearchPostLikeApi: this.initiateSearchPostLikeApi,
         }}
       >
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/login" component={LoginPage} />
-            <ProtectedRoute exact path="/" component={Home} />
-            <ProtectedRoute exact path="/users/:id" component={UserProfile} />
-            <ProtectedRoute exact path="/my-profile" component={MyProfile} />
-            <Route exact path="/not-found" component={NotFound} />
-            <Redirect to="/not-found" />
-          </Switch>
-        </BrowserRouter>
+        <Switch>
+          <Route exact path="/login" component={LoginPage} />
+          <ProtectedRoute exact path="/" component={Home} />
+          <ProtectedRoute exact path="/users/:id" component={UserProfile} />
+          <ProtectedRoute exact path="/my-profile" component={MyProfile} />
+          <Route exact path="/not-found" component={NotFound} />
+          <Redirect to="/not-found" />
+        </Switch>
       </SearchContext.Provider>
     )
   }

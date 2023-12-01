@@ -33,12 +33,16 @@ const UserPostItem = props => {
   return (
     <li className="user-post-item">
       <div className="user-profile-container">
-        <img src={profilePic} className="user-profile-pic" alt="user profile" />
+        <img
+          src={profilePic}
+          className="user-profile-pic"
+          alt="post author profile"
+        />
         <Link to={`/users/${userId}`}>
           <p className="user-name-styling">{userName}</p>
         </Link>
       </div>
-      <img src={imageUrl} className="post-image" alt="user post" />
+      <img src={imageUrl} className="post-image" alt="post" />
       <div className="post-info-container">
         <div className="icon-container">
           {isLiked ? (

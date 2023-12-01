@@ -95,6 +95,24 @@ class UserPosts extends Component {
     </div>
   )
 
+  renderFailureView = () => (
+    <div className="failure_view_container">
+      <img
+        className="user_profile_failure_img"
+        src="https://res.cloudinary.com/dl9ywntts/image/upload/v1700376206/alert-triangle_hqda7o.jpg"
+        alt="failure view"
+      />
+      <p className="failure_heading">Something went wrong. Please try again</p>
+      <button
+        onClick={() => this.getPosts()}
+        type="submit"
+        className="failure-button"
+      >
+        Try again
+      </button>
+    </div>
+  )
+
   initiatePostLikeApi = async (postId, likeStatus) => {
     const {postsList} = this.state
     const jwtToken = Cookies.get('jwt_token')
@@ -148,16 +166,19 @@ class UserPosts extends Component {
   )
 
   renderSearchResults = searchPosts => (
-    <ul className="search-result-list">
-      {searchPosts &&
-        searchPosts.map(eachSearchPost => (
-          <SearchPostItem
-            searchUserPostDetails={eachSearchPost}
-            key={eachSearchPost.postId}
-            initiateSearchPostLikeApi={this.initiateSearchPostLikeApi}
-          />
-        ))}
-    </ul>
+    <div className="search-results-container">
+      <h1 className="search-results-heading">Search Results</h1>
+      <ul className="search-result-list">
+        {searchPosts &&
+          searchPosts.map(eachSearchPost => (
+            <SearchPostItem
+              searchUserPostDetails={eachSearchPost}
+              key={eachSearchPost.postId}
+              initiateSearchPostLikeApi={this.initiateSearchPostLikeApi}
+            />
+          ))}
+      </ul>
+    </div>
   )
 
   renderPostsResults = postsList => (

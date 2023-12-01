@@ -157,3 +157,87 @@
     line-height: 48px; /* 150% */
   }
 }
+
+@media screen and (max-width: 767px) {
+  .profile-pic {
+    width: 10vw;
+    height: 5vh;
+    flex-shrink: 0;
+    border-radius: 8vh;
+    margin-top: 2vh;
+    margin-right: 2vw;
+  }
+  .my-profile-info-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .user-name {
+    margin-bottom: 2vh;
+  }
+  .followers-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .follow-count {
+    color: #262626;
+    font-family: Roboto;
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 500; /* 150% */
+  }
+  .my-profile-page-container {
+    padding: 2vh;
+  }
+  .user-id {
+    color: #262626;
+    font-family: Roboto;
+    font-size: 2vh;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .user-bio {
+    color: #262626;
+    font-family: Roboto;
+    font-size: 2vh;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .stories-list {
+    list-style: none;
+    display: flex;
+  }
+  .user-story-image {
+    height: 5vh;
+    width: 10vw;
+    border-radius: 5vh;
+    margin-right: 2vw;
+  }
+  .posts-heading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .grid-icon {
+    margin-left: 5vw;
+    font-size: 3vh;
+    margin-top: 3vh;
+    margin-right: 2vw;
+  }
+  .my-profile-posts-container {
+    list-style: none;
+    display: flex;
+  }
+  .each-post-image {
+    height: 15vh;
+    width: 20vw;
+    margin: 1vh;
+  }
+  .camera-icon {
+    font-size: 10vh;
+    width: 20vw;
+  }
+  .no-posts-heading {
+    font-size: 3vh;
+  }
+}

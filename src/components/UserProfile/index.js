@@ -103,18 +103,23 @@ class UserProfile extends Component {
             <h1 className="user-name">{userProfile.userName}</h1>
             <div className="followers-container">
               <p className="follow-text">
-                <span className="follow-count">{userProfile.postsCount}</span>
+                <span className="follow-count">
+                  {userProfile.postsCount}
+                  <br />
+                </span>
                 posts
               </p>
               <p className="follow-text">
                 <span className="follow-count">
                   {userProfile.followersCount}
+                  <br />
                 </span>
                 followers
               </p>
               <p className="follow-text">
                 <span className="follow-count">
                   {userProfile.followingCount}
+                  <br />
                 </span>
                 following
               </p>

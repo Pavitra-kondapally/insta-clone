@@ -1,5 +1,5 @@
 @media screen and (min-width: 768px) {
-  .nav-header {
+  .large-devices {
     padding-left: 200px;
     padding-right: 200px;
     width: 1440px;
@@ -11,6 +11,19 @@
     padding-top: 25px;
     padding-bottom: 25px;
     margin-bottom: 20px;
+  }
+  .header-title {
+    color: #262626;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 120% */
+  }
+  .website-logo-container {
+    display: flex;
+    flex-direction: row;
   }
   .header-right-container {
     display: flex;
@@ -70,5 +83,116 @@
   .nav-list-item {
     margin-left: 10px;
     margin-bottom: 10px;
+  }
+  .mobile-devices {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .large-devices {
+    display: none;
+  }
+  .mobile-devices {
+    height: 10vh;
+    width: 100vw;
+  }
+  .top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2vh;
+    height: 8vh;
+    width: 100vw;
+  }
+  .header-mobile-website-image {
+    width: 3vh;
+    height: 5vw;
+    flex-shrink: 0;
+    margin-top: 2vh;
+    margin-right: 2vw;
+  }
+  .title-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .header-title {
+    color: #262626;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 2vh;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 120% */
+    margin-top: 2vh;
+  }
+  .hamburgerIcon {
+    width: 3vh;
+    height: 5vw;
+    flex-shrink: 0;
+  }
+  .nav_bar {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8vh;
+  }
+  .links_div {
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: row;
+  }
+  .logout_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: #4094ef;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 1vh;
+    font-style: normal;
+    font-weight: 500;
+    height: 4vh;
+    width: 12vw;
+    margin-top: 2vh;
+    border-style: none;
+  }
+  .searchBar {
+    width: 60vw;
+    height: 3vh;
+    flex-shrink: 0;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    background: #fafafa;
+    margin-top: 6vh;
+    margin-left: 5vw;
+  }
+  .nav-list-item {
+    margin-right: 5vw;
+  }
+  .searchIcon {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+  }
+  .searchButton {
+    fill: #989898;
+  }
+  .nav-item {
+    margin-right: 5px;
+  }
+  .hamburgerButton {
+    border-style: none;
+    background-color: transparent;
+  }
+  .close-button {
+    margin-bottom: 5vh;
+    border-style: none;
+    background-color: transparent;
+  }
+  .search_div {
+    margin-bottom: 50vh;
   }
 }

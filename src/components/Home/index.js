@@ -71,6 +71,36 @@ const settings = {
     },
   ],
 }
+const settingsMobile = {
+  dots: false,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1000,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+}
 
 class Home extends Component {
   state = {
@@ -124,19 +154,42 @@ class Home extends Component {
     const {userStoriesList} = this.state
     console.log(userStoriesList)
     return (
-      <div className="slider-container">
-        <Slider {...settings}>
-          {userStoriesList.map(each => {
-            const {userId, userName, storyUrl} = each
-            return (
-              <div className="slick-item" key={userId}>
-                <img src={storyUrl} className="story-image" alt="user story" />
-                <p className="name-style">{userName}</p>
-              </div>
-            )
-          })}
-        </Slider>
-      </div>
+      <>
+        <div className="slider-desktop-container">
+          <Slider {...settings}>
+            {userStoriesList.map(each => {
+              const {userId, userName, storyUrl} = each
+              return (
+                <div className="slick-item" key={userId}>
+                  <img
+                    src={storyUrl}
+                    className="story-image"
+                    alt="user story"
+                  />
+                  <p className="name-style">{userName}</p>
+                </div>
+              )
+            })}
+          </Slider>
+        </div>
+        <div className="slider-mobile-container">
+          <Slider {...settingsMobile}>
+            {userStoriesList.map(each => {
+              const {userId, userName, storyUrl} = each
+              return (
+                <div className="slick-item" key={userId}>
+                  <img
+                    src={storyUrl}
+                    className="story-image"
+                    alt="user story"
+                  />
+                  <p className="name-style">{userName}</p>
+                </div>
+              )
+            })}
+          </Slider>
+        </div>
+      </>
     )
   }
 
@@ -149,7 +202,7 @@ class Home extends Component {
       <img
         src="https://res.cloudinary.com/dl9ywntts/image/upload/v1699360134/failure_image_dujtym.png"
         className="failure-image"
-        alt="Failure View"
+        alt="failure view"
       />
       <h1 className="failure-text">Something went wrong. Please try again</h1>
       <button

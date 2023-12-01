@@ -83,17 +83,20 @@ class MyProfile extends Component {
             <div className="followers-container">
               <p className="follow-text">
                 <span className="follow-count">{myProfileData.postsCount}</span>
+                <br />
                 posts
               </p>
               <p className="follow-text">
                 <span className="follow-count">
                   {myProfileData.followersCount}
+                  <br />
                 </span>
                 followers
               </p>
               <p className="follow-text">
                 <span className="follow-count">
                   {myProfileData.followingCount}
+                  <br />
                 </span>
                 following
               </p>
@@ -107,11 +110,7 @@ class MyProfile extends Component {
             const {id, image} = eachStory
             return (
               <li className="each-story-item" key={id}>
-                <img
-                  src={image}
-                  alt="user story"
-                  className="user-story-image"
-                />
+                <img src={image} alt="my story" className="user-story-image" />
               </li>
             )
           })}
@@ -126,11 +125,7 @@ class MyProfile extends Component {
               const {id, image} = eachPost
               return (
                 <li className="each-post-item" key={id}>
-                  <img
-                    src={image}
-                    className="each-post-image"
-                    alt="user post"
-                  />
+                  <img src={image} className="each-post-image" alt="my post" />
                 </li>
               )
             })}

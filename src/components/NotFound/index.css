@@ -45,3 +45,50 @@
     background: #4094ef;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .not-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .not-found-image {
+    height: 40vh;
+    width: 30vw;
+  }
+  .not-found-title {
+    color: #262626;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 5vh;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .not-found-text {
+    color: #989898;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 5vh;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .home-page-button {
+    color: var(--light-base-white, #fff);
+
+    /* Action / Button / Medium */
+    font-family: Inter;
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 500;
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    height: 8vh;
+    width: 5vw;
+    border-radius: 5px;
+    background: #4094ef;
+  }
+}

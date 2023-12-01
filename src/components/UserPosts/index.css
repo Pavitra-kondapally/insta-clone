@@ -38,4 +38,100 @@
   .search-result-list {
     list-style: none;
   }
+  .search-results-heading {
+    color: #262626;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 133.333% */
+  }
+  .search-results-container {
+    padding: 10px;
+  }
+  .failure_view_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .user_profile_failure_img {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+  .failure_heading {
+    color: #262626;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+  }
+  .failure-button {
+    display: flex;
+    padding: 8px 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: #4094ef;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .failure-image {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .failure-text {
+    color: #262626;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+  }
+  .retry-btn {
+    display: flex;
+    padding: 8px 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: #4094ef;
+  }
+  .no-search-image {
+    width: 258.001px;
+    height: 210px;
+    flex-shrink: 0;
+  }
+  .no-search-heading {
+    color: #262626;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 160% */
+  }
+  .no-search-text {
+    color: #989898;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+  }
+  .search-results-heading {
+    display: none;
+  }
+  .search-result-list {
+    list-style: none;
+  }
+  .posts-list {
+    list-style: none;
+  }
 }
